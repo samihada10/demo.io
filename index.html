@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="index.css" />
+    <title>WebApp</title>
+  </head>
+  <body>
+    <div id="main">
+      <h1>Online Shop</h1>
+      <img src="sam.jpg" alt="logo" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis
+        consequuntur ullam, obcaecati officia ipsum aspernatur.
+      </p>
+      <button id="buy">Buy</button>
+    </div>
+    <div class="wrapeer" id="form">
+      <form action="">
+        <h1>Login</h1>
+        <div class="input_form">
+          <input class="input1" type="text" placeholder="Username" required /><i
+            class="bx bxs-user" id="username"
+          ></i>
+        </div>
+        <div class="input_form">
+          <input
+            class="input2"
+            type="password"
+            placeholder="Password"
+            required
+            id="password"
+          /><i class="bx bxs-lock-alt"></i>
+        </div>
+        <div class="remember_forgot">
+          <label> <input type="checkbox" />Remember me </label>
+          <a href="#">Forgot password?</a>
+        </div>
+        <button class="btn" id="login">Login</button>
+        <div class="register">
+          <p>Don't have an account?<a href="#">Register</a></p>
+        </div>
+      </form>
+      <script src="https://telegram.org/js/telegram-web-app.js"></script>
+     <script>
+      let tg = window.Telegram.WebApp;
+      let buy = document.getElementById("buy")
+      let login = document.getElementById("login");
+      tg.expand();
+
+      buy.addEventListener("click",()=>{
+        document.getElementById("main").style.display = 'none';
+        document.getElementById("form").style.display = 'block';
+      })
+
+      order.addEventListener("click",()=>{
+        let username = document.getElementById('');
+        let password = document.getElementById('');
+        let data = {
+          username:username,
+          password:password,
+        };
+        tg.sendData(JSON.stringify(data));
+
+      
+        tg.close();
+      })
+      
+     </script>
+  </body>
+</html>
